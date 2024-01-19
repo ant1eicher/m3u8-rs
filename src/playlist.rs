@@ -884,7 +884,7 @@ impl MediaSegment {
             writeln!(w, "{}", unknown_tag)?;
         }
 
-        write!(w, "#EXTINF:{},", self.duration)?;
+        write!(w, "#EXTINF:{:.3},", self.duration)?;
 
         if let Some(ref v) = self.title {
             writeln!(w, "{}", v)?;
